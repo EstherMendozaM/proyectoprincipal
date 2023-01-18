@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/plantilla :: head">
+</head>
+<body>
+<header th:replace="plantilla/plantilla :: header"> </header>
+<div class="container mt-2">
+<form th:action="@{/grabar}" th:object="${empleado}" method="post">
+<div class="card bg-light">
+<div class="card-header bg-info text-white" th:text="${titulo}"></div>
+<div class="form-group row">
+<label class="col-md-2" for="nombre">Id:</label> <input
+type="text" th:field="*{id}"
+class="form-control form-control-sm col-md-10" id="Id"
+placeholder="Id"> <small> </small>
+</div>	
+<div class="form-group row">
+<label class="col-md-2" for="nombre">DNI:</label> <input
+type="text" th:field="*{dni}"
+class="form-control form-control-sm col-md-10" id="placa"
+placeholder="DNI del empleado"> <small> </small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="nombre">Nombre:</label> <input
+type="text" th:field="*{nombre}"
+class="form-control form-control-sm col-md-10" id="Id"
+placeholder="Nombre del empleado"> <small> </small>
+</div>	
+<div class="form-group row">
+<label class="col-md-2" for="marca">Dirección:</label> <input
+type="text" th:field="*{direccion}"
+class="form-control form-control-sm col-md-10" id="marca"
+placeholder="Dirección del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="modelo">Distrito:</label> <input
+type="text" th:field="*{distrito}"
+class="form-control form-control-sm col-md-10" id="modelo"
+placeholder="Distrito del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="Precio">Edad:</label> <input
+type="text" th:field="*{edad}"
+class="form-control form-control-sm col-md-10" id="modelo"
+placeholder="Edad del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="Precio">Celular:</label> <input
+type="text" th:field="*{celular}"
+class="form-control form-control-sm col-md-10" id="modelo"
+placeholder="Celular del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="color">Correo:</label> <input
+type="text" th:field="*{correo}"
+class="form-control form-control-sm col-md-10" id="color"
+placeholder="Correo del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="Precio">Sexo:</label> <input
+type="text" th:field="*{sexo}"
+class="form-control form-control-sm col-md-10" id="modelo"
+placeholder="Sexo del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="Precio">Cargo:</label> <input
+type="text" th:field="*{cargo}"
+class="form-control form-control-sm col-md-10" id="modelo"
+placeholder="Cargo del empleado"> <small></small>
+</div>
+<div class="form-group row">
+<label class="col-md-2" for="color">Sueldo:</label> <input
+type="text" th:field="*{sueldo}"
+class="form-control form-control-sm col-md-10" id="color"
+placeholder="Sueldo del empleado"> <small></small>
+</div>
+</div>
+<div class="card-footer bg-light">
+	<input type="submit" class="btn btn-primary btn-sm" value="Guardar">
+</div>
+</div>
+</form>
+</div>
+<footer th:replace="plantilla/plantilla :: footer"> </footer>
+</body>
+</html>
+
